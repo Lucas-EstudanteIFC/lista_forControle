@@ -7,11 +7,15 @@
     */
 
     //ENTRADA
-    
-
+    const qNotas = parseInt(prompt(`Quantas notas o aluno obteve?`).trim());
+    let listaNotas = []
     //PROCESSAMENTO
-    
+    for (let contador = 0; contador < qNotas; contador++) { 
+        let nota = parseFloat(prompt(`Quais as notas deste aluno`).trim().replace(",", "."));
+        listaNotas.push(nota);
+    }
+    let media = listaNotas.reduce((acumulador, elemento) => acumulador + elemento, 0) / qNotas;
 
     //SAÍDA
-
+    alert(media)
 </script>
