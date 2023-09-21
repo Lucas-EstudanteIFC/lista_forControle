@@ -7,10 +7,13 @@
 
     //ENTRADA
 
-
+    let lista = []
     //PROCESSAMENTO
-
-
+    for (let contador = 0; contador <= 4; contador++) {
+        let num = Math.round(Math.random() * 10)
+        lista.push(num);
+    }
+    let media = lista.reduce((acumulador, elemento) => acumulador + elemento, 0) / lista.length;
     //SAÍDA
-
+    alert(`A média é de ${media}`);
 </script>

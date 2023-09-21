@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
+    let populacao5 = 50000
+    let populacao10 = 50000
 
-    
     //PROCESSAMENTO
-    
+    let contador = 0
+    for (contador = 0; contador < 5; contador++) {
+        populacao5*=1.015;
+    }
 
+    for (contador = 0; contador < 10; contador++) {
+        populacao10*=1.015;
+        
+    }
     //SAÍDA
-
+    document.write(`A população esperada em 5 anos é ${Math.floor(populacao5)}. \n A população esperada em 10 anos é ${Math.floor(populacao10)}.`);
 </script>

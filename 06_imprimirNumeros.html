@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
+    const inicial = parseInt(prompt(`Informe um número inicial.`).trim());
+    const final = parseInt(prompt(`Informe um número final.`).trim());
 
-    
     //PROCESSAMENTO
+    if (inicial == final) alert(`Valor Inválido! Informe valores diferentes!`)
+    else {
+        let impares = [];
+        let pares = [];
 
-    
+        for (let contador = inicial; contador < final; contador++) {
+            if (contador % 2 == 0) pares.push(contador);
+            else impares.push(contador);
+        }
+        document.write(`Números pares de ${inicial} a ${final}: ${pares} <br> Números pares de ${inicial} a ${final}: ${impares}`)
+    }
+
     //SAÍDA
-
+    
 </script>
