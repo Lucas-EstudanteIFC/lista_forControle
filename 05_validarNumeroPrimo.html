@@ -9,14 +9,16 @@
     const numP = parseInt(prompt(`Informe um número`).trim());
 
     //PROCESSAMENTO
-    for (let contador = 0; contador <= numP; contador++) {
-        if(contador*numP === 4){
-            document.write(`O número ${numP} é primo.`);
-        }
-        else if (contador / numP === 1){
-            
+    let divisivel = 0;
+    for (let contador = 1; contador <= numP; contador++) {
+        if (numP % contador == 0) {
+            divisivel++;
         }
     }
-    //SAÍDA
-
+    if (divisivel == 2) {
+        alert(`É número primo!`);
+    }
+    else {
+        alert(`Não é número primo!`);
+    }
 </script>

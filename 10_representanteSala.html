@@ -8,19 +8,28 @@
     */
 
     //ENTRADA
-    const quantidadeVotos = parseInt(prompt(`Qual a quantidade de alunos votantes?`).trim());
-    
+    const candidato1 = prompt(`Qual o candidato 1?`).trim();
+    const candidato2 = prompt(`Qual o candidato 2?`).trim();
+    const candidato3 = prompt(`Qual o candidato 3?`).trim();
+    const votantes = parseInt(prompt(`Qual a quantidade de alunos votantes?`).trim());
+
     //PROCESSAMENTO
-    for (let contador = 1; contador <= 3; contador++) {
-        let representante = prompt(`Quais são os três candidatos?`);
+    let votos1 = 0
+    let votos2 = 0
+    let votos3 = 0
 
-        for (contador = 1; contador < quantidadeVotos; quantidadeVotos--) {
-            
-            
-        }
-        
+    for (let contador = 1; contador < votantes; contador++) {
+        const voto = prompt(`Qual dos 3 canditados você vota? \n 1 | 2 | 3`);
+        if (voto == 1) votos1++
+        else if (voto == 2) votos2++
+        else votos3++
+
     }
-
+    let porcentagem
+    let contagem = [votos1, votos2, votos3];
+    for (const votos of contagem) {
+        porcentagem = (votos / votantes) * 100
+    }
     //SAÍDA
-
+    document.write(`O ${candidato1} ganhou ${votos1} votos com uma porcentagem de ${Math.round(porcentagem)}%; O ${candidato2} ${votos2} votos com uma porcentagem de ${Math.round(porcentagem)}%; O ${candidato3} ganhou ${votos3} com uma porcentagem de ${Math.round(porcentagem)}%;`);
 </script>
